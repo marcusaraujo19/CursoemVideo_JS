@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Escreva seu nome: ")
+        document.write(`Olá ${n} Seu nome tem ${n.length} letras<br/>`)
+        document.write(`Seu nome em letras maiúscula é: ${n.toUpperCase()}<br/>`)
+        document.write(`Seu nome em letras minusculas é: ${n.toLowerCase()}<br/>`)
+        var salario = Number(1744.50)
+        document.write(`O salário minimo no Brasil é: ${salario.toFixed(2).replace(',','.')}<br>`)
+        document.write('Agora usando o método toLocalString<br>')
+        document.write(`Salário no Brasil: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`)
+        document.write(`Mesmo salário nos States United: ${(salario/5.5).toLocaleString('us-EN', {style: 'currency', currency: 'USD'})}<br>`)
+        
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+
+        input{
+            font: normal 12pt Arial;
+        }
+        
+        div#res{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando valores:</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <div id="res">
+        Resultado
+    </div>
+    <script>
+        function somar() {
+            //Declarando as variáveis que receberam o que o usuário digitou
+            var caixaTxtN1 = document.getElementById('txtn1')
+            var caixaTxtN2 = document.querySelector('input#txtn2')
+            var res = document.getElementById('res')
+
+            //Converter pq até então o que é digitado é texto
+            var n1 = Number(caixaTxtN1.value)
+            var n2 = Number(caixaTxtN2.value)
+            soma = n1 + n2 
+            res.innerHTML = `A soma entre ${n1} + ${n2} = <strong>${soma}</strong>`
+
+
+        }
+
+    </script>
+    
+    
+</body>
+</html>
