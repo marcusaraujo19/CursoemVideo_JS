@@ -33,15 +33,19 @@
     #resultado{
         text-align: center;
         margin: auto;
+        
     }
 
     #imgGenero{
-        margin: auto;
-        box-shadow: 5px 5px 5px 5px black;
-        align-items: center;
+        width: 200px;
+        height: 200px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.274);
+        overflow: hidden;
+        border-radius: 100%;
         display: flex;
-        justify-items: center;
-        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 15px;
     }
 
     
@@ -90,7 +94,8 @@
             let radioButton = document.getElementsByName('radSex')
 
             //declarando Dinamicamente uma tag img
-            
+            //let img = document.createElement('img')
+            //img.setAttribute('id', 'imgGenero')
 
 
             if (formAno.value.length == 0 || formAno.value > ano){
@@ -108,7 +113,7 @@
                         
                     }
                     else if (idade < 30){
-                        img.setAttribute('src', './entardecer.png')
+                        img.setAttribute('src', './img/homem_jovem.jpg')
                     }
                     else if(idade <51) {
                         //Adulto
