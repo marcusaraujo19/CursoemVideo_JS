@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoas do dia</title>
+</head>
+<style>
+body{
+    background-color: burlywood;
+    font: normal 18pt Arial;
+}
+
+header{
+text-align: center;
+}
+
+footer{
+    text-align: center;
+    font-size: 10pt;
+}
+
+section{
+    background-color: aliceblue;
+    text-align: center;
+    width: 330px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px rgba(165, 42, 42, 0.596);
+
+}
+
+</style>
+<body onload="passarTempo()">
+<header>
+    <div>Hora do Dia!</div>
+</header>
+
+<section>
+    <div id="area">
+        <h1 id="mensagem">Agora São: </h1>
+
+    </div >
+
+    <div id="foto">
+        <img src="./moduloD_condicoes/amanhecer.png" alt="img amanhecer">
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy;CursoEmVideo </p>
+</footer>
+
+<script>
+    function passarTempo(){
+    let msg = document.getElementById('mensagem')
+    let foto = document.getElementById('foto')
+    let data = new Date()
+    let hr = 1 //data.getHours() 
+    msg.innerText = `Agora são: ${hr} horas.`
+
+    
+        if (hr >= 0 && hr <= 12){
+            foto.src = './moduloD_condicoes/entardecer.png'
+        }
+    }
+</script>
+    
+</body>
+</html>

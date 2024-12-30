@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(127, 229, 255);
+}
+header{
+    text-align: center;
+}
+
+section{
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+
+}
+#resultado{
+    padding: 10px;
+    background-color: rgba(176, 180, 184, 0.578);
+    margin: 10px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+footer{
+    text-align: center;
+}

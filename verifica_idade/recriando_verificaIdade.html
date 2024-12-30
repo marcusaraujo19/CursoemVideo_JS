@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica Idade</title>
+</head>
+<style>
+    body{
+        background-color: darksalmon;
+    }
+    header{
+        font: normal 20pt Arial;
+        color: aliceblue;
+        text-align: center;
+    }
+
+    section{
+        background-color: aliceblue;
+        margin: auto;
+        border-radius: 10px;
+        padding: 10px;
+        font: normal 10pt Arial;
+        width: auto;
+    }
+
+    footer{
+        font: normal 8pt Arial;
+        color: aliceblue;
+        text-align: center;
+    }
+
+    #resultado{
+        text-align: center;
+        margin: auto;
+        
+    }
+
+    #imgGenero{
+        width: 200px;
+        height: 200px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.274);
+        overflow: hidden;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    
+
+</style>
+
+<body>
+
+    <header>
+        <p>Verificador de Idade</p>
+    </header>
+    <section>
+        <div id="campos">
+            <p>ANO de nascimento:
+                <input type="number" id="txtAno" name="txtAno" min="0">
+            </p>
+            <p>Gênero:
+                <input type="radio" id="rdMasc" name="radSex" checked>
+                <label for="rdMasc">Masculino</label>
+                <input type="radio" name="radSex" id="rdFem">
+                <label for="rdFem">Feminino</label>
+                <input type="radio" name="radSex" id="rdOutr">
+                <label for="">Outro</label>
+            </p>
+            <p><input type="button" value="Verificar" onclick="verificar()"></p>
+        </div>
+
+            <div id="resultado">
+                <p id="msgErro">Preencha todos os campos!</p>
+                
+            </div>
+        
+    </section>
+    <footer>
+        <p>&copy;CursoEmVideo</p>
+   </footer>
+
+    <script>
+    
+        function verificar(){
+            let data = new Date()
+            let ano = data.getFullYear() //ano atual
+            let formAno = document.getElementById('txtAno')
+            let resultado = document.getElementById('resultado')
+            let msgErro = document.getElementById('msgErro')
+            let radioButton = document.getElementsByName('radSex')
+
+            //declarando Dinamicamente uma tag img
+            //let img = document.createElement('img')
+            //img.setAttribute('id', 'imgGenero')
+
+
+            if (formAno.value.length == 0 || formAno.value > ano){
+                msgErro.innerHTML = 'Erro. Preencha os dados corretamente!'
+                msgErro.style.color = 'red'
+            }else{
+                var idade = ano - Number(formAno.value)
+                let gênero = ''
+                let img = document.createElement('img')
+                img.setAttribute('id', 'imgGenero')
+                
+                if (radioButton[0].checked){
+                    gênero = `Homem com ${idade} anos `
+                    if(idade > 0 && idade < 11){
+                        
+                    }
+                    else if (idade < 30){
+                        img.setAttribute('src', './img/homem_jovem.jpg')
+                    }
+                    else if(idade <51) {
+                        //Adulto
+                    }
+                    else{
+
+                    }
+
+                }else if (radioButton[1].checked){
+                    gênero = `Mulher com ${idade} anos `
+                }else{
+                    gênero = `Outro com ${idade} anos `
+                }
+                msgErro.style.color = 'black'
+                msgErro.innerHTML = `Detectado... ${gênero}`
+                msgErro.appendChild(img)
+            }
+        }
+    </script>
+</body>
+</html>
