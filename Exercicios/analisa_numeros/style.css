@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(70, 156, 196);
+}
+
+#exibir_val{
+    background-color: rgb(137, 168, 224);
+    border-radius: 10px;
+    width: 150px;
+    padding: 10px;
+}
