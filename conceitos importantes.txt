@@ -1,0 +1,79 @@
+Dicas e Boas Práticas
+Estruture o Seu Código:
+
+Use uma estrutura clara e organizada. Divida seu código em funções pequenas e reutilizáveis.
+
+Mantenha um estilo consistente para facilitar a leitura e manutenção.
+
+Documente e Comente:
+
+Sempre comente partes importantes do código, especialmente aquelas que não são imediatamente óbvias.
+
+Use comentários para explicar a lógica e a finalidade de funções e blocos de código.
+
+Entenda o DOM (Document Object Model):
+
+Aprenda a manipular o DOM para criar, atualizar e remover elementos da página.
+
+Use métodos como getElementById, querySelector, appendChild e createElement.
+
+Eventos:
+
+Entenda como adicionar e remover eventos, como click, mouseenter, mouseout, etc.
+
+Use addEventListener para associar eventos a elementos HTML.
+
+Validação de Formulários:
+
+Verifique os dados dos usuários antes de processá-los. Use funções de validação para garantir que os dados estejam no formato correto.
+
+Manipulação de Arrays e Objetos:
+
+Pratique métodos de array como push, pop, shift, unshift, map, filter, reduce, e sort.
+
+Entenda como acessar, adicionar e modificar propriedades de objetos.
+
+Conceitos Importantes
+Variáveis e Tipos de Dados:
+
+Pratique a criação de variáveis com let, const e var.
+
+Entenda os tipos primitivos (string, number, boolean, null, undefined) e tipos complexos (objects, arrays, functions).
+
+Funções:
+
+Crie e use funções regulares e funções de seta (arrow functions).
+
+Entenda o conceito de callback e promises para trabalhar com código assíncrono.
+
+Condicionais e Loops:
+
+Pratique condicionais (if, else, else if, switch) e loops (for, while, do-while).
+
+Manipulação de Strings:
+
+Use métodos de string como slice, substring, split, replace, concat, toUpperCase, toLowerCase.
+
+Requisições Assíncronas:
+
+Aprenda a fazer requisições HTTP usando fetch e XMLHttpRequest.
+
+Entenda como trabalhar com JSON.
+
+
+Resumo
+push: Adiciona ao final
+
+pop: Remove do final
+
+shift: Remove do início
+
+unshift: Adiciona ao início
+
+map: Transforma cada elemento
+
+filter: Filtra elementos que passam no teste
+
+reduce: Reduz o array a um único valor
+
+sort: Ordena os elementos
